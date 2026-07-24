@@ -385,7 +385,7 @@ agentgrid/
 - [`z-ai-web-dev-sdk`](https://www.npmjs.com/package/z-ai-web-dev-sdk) — AI (GLM-4)
 - [Vercel](https://vercel.com/) — Hosting
 
-**Author:** Syeda ([@rehu0](https://github.com/rehu0))
+**Author:** Syed Ainullah Agha ([@rehu0](https://github.com/rehu0))
 
 ---
 
