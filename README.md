@@ -382,7 +382,6 @@ agentgrid/
 - [shadcn/ui](https://ui.shadcn.com/) — UI primitives
 - [Framer Motion](https://www.framer.com/motion/) — Animations
 - [Recharts](https://recharts.org/) — Charts
-- [`z-ai-web-dev-sdk`](https://www.npmjs.com/package/z-ai-web-dev-sdk) — AI (GLM-4)
 - [Vercel](https://vercel.com/) — Hosting
 
 **Author:** Syed Ainullah Agha ([@rehu0](https://github.com/rehu0))
