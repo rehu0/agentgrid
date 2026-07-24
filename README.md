@@ -5,7 +5,6 @@
 ![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)
 ![TypeScript 5](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript&logoColor=white)
 ![Tailwind 4](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?logo=tailwindcss&logoColor=white)
-![AI](https://img.shields.io/badge/AI-GLM--4_(z--ai--web--dev--sdk)-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 🌐 **Live Demo:** https://agentgrid-zeta.vercel.app/
