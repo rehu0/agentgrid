@@ -1,235 +1,294 @@
-# 🤖 AgentGrid — AI Agent Marketplace & Orchestration Platform
+🤖 AgentGrid — AI Agent Marketplace & Orchestration Platform
+Hire AI agents. Ship in minutes. Describe your goal in plain English — AgentGrid assembles the perfect team of specialized AI agents and orchestrates the entire workflow end-to-end.
 
-> Hire AI agents. Ship in minutes. The world's first multi-agent orchestration marketplace.
+Next.js 16TypeScript 5Tailwind 4AILicense
 
-Describe your goal in plain English — AgentGrid assembles the perfect team of specialized AI agents and orchestrates the entire workflow end-to-end. No more juggling 10 tools. No more context-switching tax. Just outcomes.
+🌐 Live Demo: https://agentgrid-zeta.vercel.app/
 
-![AgentGrid](https://img.shields.io/badge/Next.js-16-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Tailwind](https://img.shields.io/badge/Tailwind-4-38bdf8) ![AI](https://img.shields.io/badge/AI-z--ai--web--dev--sdk-purple)
+📂 Source Code: https://github.com/rehu0/agentgrid
 
----
+📑 Table of Contents
+Overview
+Live URL
+Features
+The AI Feature
+Tech Stack
+Screenshots
+How to Run
+Project Structure
+License & Credits
+1. Overview
+What it is
+AgentGrid is an AI agent marketplace with a multi-agent orchestration layer. Instead of bouncing between ChatGPT, Claude, Midjourney, GitHub Copilot, and a dozen SaaS tools, you describe your end-goal once and AgentGrid routes it to the right combination of specialized AI agents — sequenced into a single workflow that runs end-to-end.
 
-## ✨ Features
+The real problem it solves
+Modern work is tool-sprawl hell. A solo founder building a SaaS landing page currently has to:
 
-### 🛒 Agent Marketplace
-- **12 specialized AI agents** across 8 categories (Research, Writing, Coding, Design, Marketing, Data, Automation, QA)
-- Real-time search, category filters, and 5 sort options
-- Agent cards with ratings, success rates, response times, and pricing
-- One-click hire with `localStorage` persistence
+Open ChatGPT to brainstorm copy
+Switch to Perplexity to research competitors
+Open Figma + a design tool for mockups
+Open VS Code + Copilot to build it
+Open another tool to test it
+Open Hootsuite to schedule the launch tweets
+Each switch costs ~23 minutes of context-recovery time (rescueTime research, 2023). By the time you finish, you've spent more time herding tools than doing the actual work. Worse — every tool is a separate subscription, a separate context window, a separate mental model.
 
-### ⚡ Orchestrate Workflow
-- **Plain-English → multi-agent workflow** powered by the z-ai-web-dev-sdk
-- AI picks the optimal agents, sequences them, and estimates cost
-- Live execution simulation with per-step status (pending → running → completed)
-- Cost breakdown sidebar showing savings vs. a human team
+AgentGrid collapses all of this into a single prompt.
 
-### 🤖 My Agents Dashboard
-- Manage your hired agents in one place
-- **Real-time chat with each agent** — agents respond in-character using AI
-- Usage stats: tasks this month, spend, active agents
-- Per-agent task counters
+For whom
+Audience	Pain Point	How AgentGrid Helps
+Solo founders / indie hackers	Can't afford a full team, drown in tool-juggling	One prompt → full workflow (research → copy → design → code → QA → launch)
+Small marketing teams	Need 5 specialists, have budget for 1	Hire per-task agents instead of full-time hires
+Product managers	Spend days writing briefs for each discipline	Describe the outcome, AgentGrid briefs each agent automatically
+Students / builders	Want to learn how multi-agent AI systems work	A live, open-source reference implementation
+Agencies / consultants	Margins crushed by context-switching overhead	Standardize on AI-augmented workflows per client
+Why now
+With the maturation of large language models in 2024–2026, single-agent chat is no longer the bottleneck — coordination is. AgentGrid is a small bet on what comes next: a marketplace of specialists you can orchestrate like a team, not a single oracle you must prompt perfectly.
 
-### 📊 Analytics
-- KPI cards (total tasks, spend, avg task time, success rate)
-- Task volume & cost area chart (last 7 days)
-- Task split by category (pie chart)
-- Top agents on the grid (bar chart)
-- Your personal agent leaderboard
+2. Live URL
+🚀 The app is deployed and publicly accessible here:
 
-### 🎨 Design
-- Modern, dark-first aesthetic with violet/purple accents
-- Glass-morphism navbar, animated gradient tabs, grid-background hero
-- Fully responsive (mobile-first)
-- Framer Motion micro-animations throughout
-- Built on shadcn/ui + Tailwind CSS 4
+👉 https://agentgrid-zeta.vercel.app/
+No login required. Open it in any browser, on any device.
 
----
+Try it now:
 
-## 🚀 Tech Stack
+Browse the Marketplace tab — hire 2–3 agents
+Switch to Orchestrate — type a goal like "Build a SaaS landing page with competitor research, copy, and design" and watch the AI plan a multi-agent workflow
+Open My Agents — chat live with your hired agents (real AI replies, in-character)
+Check Analytics — see KPIs, charts, and your agent leaderboard
+3. Features
+🛒 Agent Marketplace
+12 specialized AI agents across 8 categories: Research, Writing, Coding, Design, Marketing, Data, Automation, QA
+Real-time search (by name, description, or capability)
+Category filters (Research, Writing, Coding, Design, Marketing, Data, Automation, QA)
+5 sort options: Featured, Top-rated, Most-used, Cheapest, Fastest
+Agent cards show: rating, success rate, avg response time, price-per-task, capabilities, and live status
+One-click Hire button with localStorage persistence (hired agents survive page refresh)
+Featured agent ribbon + "New" badge for recently added agents
+⚡ Orchestrate Workflow (AI-Powered)
+Plain-English → multi-agent workflow — the AI reads your goal and assembles the right team
+AI picks the optimal agents, sequences them logically, and estimates cost
+Live execution simulation — each step animates through pending → running → completed with realistic per-step outputs
+Cost breakdown sidebar — total cost, per-agent cost, and savings vs. a human team
+Estimated duration calculation
+Graceful fallback: if AI is unavailable, a deterministic regex-based planner takes over
+🤖 My Agents Dashboard
+Manage all hired agents in one place
+Real-time chat with each agent — agents respond in-character using the z-ai-web-dev-sdk (GLM-4)
+Usage stats per agent: tasks completed, total spend
+Per-agent task counters and last-active status
+Empty-state illustrations when no agents are hired yet
+📊 Analytics
+4 KPI cards: total tasks, total spend, avg task time, success rate
+Area chart — task volume & cost over last 7 days (Recharts)
+Pie chart — task distribution by category
+Bar chart — top-performing agents on the grid
+Personal agent leaderboard with rank, name, tasks, spend
+🎨 Design & UX
+Modern dark-first aesthetic with violet/purple accent palette
+Glass-morphism navbar with animated gradient tabs (Framer Motion layoutId)
+Grid-background hero with gradient text headlines
+Fully responsive (mobile-first, tested on phone/tablet/desktop)
+Framer Motion micro-animations throughout (card hovers, tab transitions, AnimatePresence on tab switch)
+Custom scrollbars, status dots, and gradient utility classes
+Built on shadcn/ui + Tailwind CSS 4 with oklch color tokens
+4. The AI Feature
+AgentGrid has two AI features, both powered by the z-ai-web-dev-sdk (which calls GLM-4 chat completions under the hood). Both routes have deterministic fallbacks if the AI call fails — so the app is never dead.
 
-| Layer | Tech |
-|-------|------|
-| Framework | **Next.js 16** (App Router, Turbopack) |
-| Language | **TypeScript 5** |
-| Styling | **Tailwind CSS 4** + **shadcn/ui** |
-| UI Motion | **Framer Motion** |
-| Charts | **Recharts** |
-| Icons | **lucide-react** |
-| AI | **z-ai-web-dev-sdk** (GLM-4 chat completions) |
-| State | React hooks + `localStorage` |
-| Package Manager | **Bun** (also works with npm/pnpm/yarn) |
+4.1 — Workflow Orchestration (POST /api/orchestrate)
+What it does:The user submits a plain-English goal (e.g., "Build a SaaS landing page with competitor analysis, copy, design, and code"). The API sends the goal + the entire agent catalog to GLM-4, which picks 2–6 specialists from the marketplace and sequences them into a workflow. Each step includes a description, expected output, and assigned agent.
 
----
+System prompt (exact text used in production):
 
-## 📦 Local Development
+You are AgentGrid's workflow orchestrator. Given a user's goal, pick 2-6specialized agents from this catalog and sequence them into a workflow.CATALOG:{dynamic — full agent list with id, name, description, capabilities}Respond with ONLY a JSON object of this exact shape (no markdown, no prose,no code fences):{"steps":[{"agentId":"<id from catalog>","description":"<imperative sentence>","output":"<short past-tense outcome>"}]}Rules:- Use only agentIds from the catalog above.- Order steps logically (research → write → design → code → qa).- Each description must be a single imperative sentence under 80 chars.- Each output must be a single past-tense sentence under 100 chars.- Pick the minimum set of agents needed. Don't pad.
+API call parameters:
 
-### Prerequisites
-- Node.js 18+ (or Bun 1.1+)
-- A z-ai-web-dev-sdk config file (see below)
+temperature: 0.4 (deterministic-ish planning)
+max_tokens: 800
+thinking: { type: "disabled" } (we want pure JSON, no chain-of-thought)
+Validation layer:
+After GLM-4 returns the plan, the server validates every agentId against the catalog (rejects hallucinated IDs), truncates over-long strings, and falls back to a deterministic regex planner if the response is malformed or empty.
 
-### Install & Run
+File: src/app/api/orchestrate/route.ts
 
-```bash
-# 1. Install dependencies
+4.2 — Agent Chat (POST /api/chat)
+What it does:
+Once a user has hired an agent (e.g., Scout the research agent), they can chat with it in the My Agents tab. Each agent responds in-character — Scout talks like a senior research analyst, Quill like a senior copywriter, and so on. The agent's name and role are injected into the system prompt so the model knows who to be.
+
+System prompt (exact text used in production):
+
+text
+
+You are {agentName}, an AI agent on the AgentGrid marketplace.
+
+Your role: {agentRole}
+
+Personality:
+- Confident, concise, and pragmatic
+- Talk like a senior specialist who ships — not a chatbot
+- Use short sentences. Skip filler.
+- When the user asks for something concrete, propose a plan with 2-4 bullet
+  steps and offer to start
+- When you need more info, ask exactly one clarifying question
+- Never say you're "just an AI" or "an AI model" — you ARE {agentName}
+- Keep replies under 120 words
+API call parameters:
+
+temperature: 0.7 (more creative, more personality)
+max_tokens: 400
+thinking: { type: "disabled" }
+Validation layer:
+Server validates the agentId against the catalog before calling the model. If the AI call fails, a deterministic in-character fallback reply is generated.
+
+File: src/app/api/chat/route.ts
+
+Why two AI features instead of one?
+The orchestration AI is the planner — it sees the whole catalog and decides who does what. The chat AI is the executor — each agent speaks only for itself, with its own personality and scope. This mirrors how real teams work: a project manager assembles the team, then each specialist talks to the client in their own voice.
+
+5. Tech Stack
+Tools, Services & AI Models Used
+Layer
+Technology
+Why
+Web Framework	Next.js 16 (App Router, Turbopack)	Latest Next.js with React 19, RSC, edge-ready
+Language	TypeScript 5	Type safety across frontend + API
+Styling	Tailwind CSS 4	Utility-first, oklch color tokens, dark-first theme
+UI Components	shadcn/ui	Accessible, customizable primitives built on Radix
+Animation	Framer Motion	Tab transitions, card hovers, AnimatePresence
+Charts	Recharts	KPIs, area/pie/bar charts in Analytics
+Icons	lucide-react	Lightweight, consistent icon set
+AI SDK	z-ai-web-dev-sdk	Official Z.ai SDK → calls GLM-4 chat completions
+AI Model	GLM-4 (via z-ai-web-dev-sdk)	Powers both orchestration planning and agent chat
+State Management	React hooks + localStorage	Hired-agent persistence across sessions
+HTTP Client	Native fetch	Built into Next.js / browser
+Package Manager	npm	Universal Node ecosystem tooling
+Version Control	Git + GitHub	Public repo for grading & collaboration
+Hosting / Deployment	Vercel	First-class Next.js host, edge network, auto-deploys on git push
+Development OS	Windows 11	Local development environment
+Editor	VS Code	Standard TypeScript/Next.js IDE
+Build Tool	Turbopack (via Next.js 16)	Faster dev + production builds
+
+AI Models — Summary
+Use Case
+Model
+How Called
+Workflow Orchestration (planning)	GLM-4	zai.chat.completions.create({ messages, temperature: 0.4, max_tokens: 800 })
+Agent Chat (in-character replies)	GLM-4	zai.chat.completions.create({ messages, temperature: 0.7, max_tokens: 400 })
+
+Both calls go through the official z-ai-web-dev-sdk Node package, which handles authentication and request routing to the GLM-4 endpoint. The SDK is initialized via await ZAI.create() and credentials are loaded from a gitignored .z-ai-config file (never committed to the repo).
+
+6. Screenshots
+🖼️ Screenshot 1 — Agent Marketplace
+Agent Marketplace
+
+The landing tab — 12 specialized AI agents across 8 categories. Users can search, filter by category, sort by rating/price/speed, and one-click hire any agent. Cards show ratings, success rates, response times, and live status.
+
+🖼️ Screenshot 2 — Orchestrate (AI Workflow Generation)
+Orchestrate
+
+The AI orchestration tab — user typed "Build a SaaS landing page with competitor research, copy, design, and code", and the AI assembled a multi-agent workflow (Scout → Quill → Pixel → Forge → Sentinel). Each step animates through pending → running → completed, with a live cost breakdown on the right.
+
+🖼️ Screenshot 3 — Analytics Dashboard
+Analytics
+
+The analytics tab — KPI cards (total tasks, spend, avg time, success rate), an area chart of task volume & cost over 7 days, a pie chart of task distribution by category, and a bar chart of top-performing agents.
+
+Want to see more? Open the live app at https://agentgrid-zeta.vercel.app/ and try the My Agents tab — hire an agent and chat with it in real time.
+
+7. How to Run
+Prerequisites
+Node.js 18+ (Node 20+ recommended)
+npm (ships with Node) — or pnpm / yarn / bun if you prefer
+A Z.ai API key (or the z-ai-web-dev-sdk config file) — see step 4 below
+Step-by-step
+bash
+
+# 1. Clone the repo
+git clone https://github.com/rehu0/agentgrid.git
+cd agentgrid
+
+# 2. Install dependencies
 npm install
-# or: bun install / pnpm install / yarn
 
-# 2. Set up the AI SDK config
+# 3. Set up the AI SDK config
 #    Create a file named `.z-ai-config` in the project root:
 #    {
 #      "baseUrl": "https://internal-api.z.ai/v1",
-#      "apiKey": "YOUR_API_KEY",
+#      "apiKey": "YOUR_API_KEY_HERE",
 #      "chatId": "optional",
 #      "userId": "optional"
 #    }
+#    NOTE: `.z-ai-config` is in .gitignore — it will never be committed.
 
-# 3. Start the dev server
+# 4. Start the dev server
 npm run dev
-# or: bun run dev
 
-# 4. Open http://localhost:3000
-```
+# 5. Open the app → http://localhost:3000
+Production build
+bash
 
-### Build for Production
-
-```bash
 npm run build
 npm start
-```
+Environment variables (optional)
+If you prefer env vars over the .z-ai-config file, you can also set:
 
----
+bash
 
-## 🌐 Deploy to Vercel
+ZAI_API_KEY=your_key_here
+The SDK will pick this up automatically. Never commit .env files — they are in .gitignore.
 
-AgentGrid is 100% Vercel-ready. Two ways to deploy:
+Deployment (Vercel)
+Push the repo to GitHub (already done: https://github.com/rehu0/agentgrid)
+Go to https://vercel.com/new
+Click Continue with GitHub → import rehu0/agentgrid
+Vercel auto-detects Next.js — just click Deploy
+(Optional) Add ZAI_API_KEY in Project Settings → Environment Variables
+Live URL will be https://agentgrid-<something>.vercel.app/
+8. Project Structure
+text
 
-### Option A: One-Click via Vercel Dashboard
-1. Push this repo to GitHub (see below).
-2. Go to [vercel.com/new](https://vercel.com/new).
-3. Import your GitHub repo.
-4. **Framework Preset**: Next.js (auto-detected).
-5. **Build Command**: `next build` (auto-detected).
-6. **Output Directory**: `.next` (auto-detected).
-7. Click **Deploy**. ✨
-
-### Option B: via Vercel CLI
-```bash
-npm i -g vercel
-vercel          # preview deployment
-vercel --prod   # production deployment
-```
-
-### Environment
-No environment variables are required **if** you commit a `.z-ai-config` file at the project root. For production, you may instead set the same JSON as a Vercel secret and load it at runtime — but the SDK also searches `/etc/.z-ai-config` and `~/.z-ai-config` automatically.
-
----
-
-## 🔼 Push to GitHub
-
-### Step 1: Create a new repo on GitHub
-Go to [github.com/new](https://github.com/new), name it `agentgrid`, and **don't** initialize with README (we already have one).
-
-### Step 2: Push from your local machine
-
-```bash
-# Initialize git (if not already)
-git init
-
-# Add all files
-git add .
-
-# First commit
-git commit -m "🚀 Initial commit: AgentGrid — AI Agent Marketplace & Orchestration Platform"
-
-# Set the branch name (GitHub defaults to 'main')
-git branch -M main
-
-# Add your GitHub repo as remote (replace YOUR-USERNAME)
-git remote add origin https://github.com/YOUR-USERNAME/agentgrid.git
-
-# Push
-git push -u origin main
-```
-
-### Step 3: Connect to Vercel
-After the push, go to [vercel.com/new](https://vercel.com/new) and import the repo. Every future `git push` will automatically trigger a new deployment. 🎉
-
----
-
-## 📁 Project Structure
-
-```
-.
+agentgrid/
 ├── src/
 │   ├── app/
 │   │   ├── api/
-│   │   │   ├── agents/route.ts        # GET /api/agents — list all agents
-│   │   │   ├── orchestrate/route.ts   # POST /api/orchestrate — AI workflow planner
-│   │   │   └── chat/route.ts          # POST /api/chat — chat with an agent
-│   │   ├── globals.css                # AgentGrid theme (dark-first, violet accent)
-│   │   ├── layout.tsx                 # Root layout + metadata
-│   │   └── page.tsx                   # Main page — tabs + state + localStorage
+│   │   │   ├── agents/route.ts          # GET  /api/agents
+│   │   │   ├── orchestrate/route.ts     # POST /api/orchestrate
+│   │   │   └── chat/route.ts            # POST /api/chat
+│   │   ├── globals.css                  # AgentGrid theme
+│   │   ├── layout.tsx                   # Root layout + metadata
+│   │   └── page.tsx                     # Main page — 4 tabs + state
 │   ├── components/
 │   │   ├── agentgrid/
-│   │   │   ├── Navbar.tsx             # Sticky glass navbar with animated tabs
-│   │   │   ├── HeroSection.tsx        # Landing hero with platform stats
-│   │   │   ├── AgentCard.tsx          # Agent card with hire button
-│   │   │   ├── Marketplace.tsx        # Searchable, filterable agent grid
-│   │   │   ├── Orchestrate.tsx        # Goal → AI workflow → execute
-│   │   │   ├── MyAgents.tsx           # Hired agents + chat modal
-│   │   │   ├── Analytics.tsx          # KPIs + charts + leaderboard
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── HeroSection.tsx
+│   │   │   ├── AgentCard.tsx
+│   │   │   ├── Marketplace.tsx
+│   │   │   ├── Orchestrate.tsx
+│   │   │   ├── MyAgents.tsx
+│   │   │   ├── Analytics.tsx
 │   │   │   └── Footer.tsx
-│   │   └── ui/                        # shadcn/ui components
+│   │   └── ui/                          # shadcn/ui primitives
 │   ├── lib/
-│   │   ├── data.ts                    # 12 agents, categories, sample workflow
-│   │   ├── utils.ts                   # cn() helper
-│   │   └── db.ts                      # Prisma client (unused in MVP)
+│   │   ├── data.ts                      # 12 agents, categories, stats
+│   │   └── utils.ts                     # cn() helper
 │   └── types/
-│       └── agent.ts                   # All TypeScript types
-├── public/                            # Logo, robots.txt
-├── prisma/schema.prisma               # (Empty — ready for future DB features)
+│       └── agent.ts                     # All TypeScript types
+├── public/                              # Logo, favicon, robots.txt
+├── .gitignore                           # Excludes .env*, .z-ai-config
 ├── next.config.ts
 ├── tailwind.config.ts
+├── tsconfig.json
 ├── package.json
-└── README.md
-```
+└── README.md                            # ← you are here
+9. License & Credits
+License: MIT — build cool things with it.
 
----
+Built with:
 
-## 🧠 How the AI Works
-
-### Workflow Orchestration (`/api/orchestrate`)
-1. User submits a plain-English goal (e.g., *"Build a SaaS landing page with competitor analysis, copy, design, and code"*).
-2. The API sends the goal + the agent catalog to **GLM-4** via `z-ai-web-dev-sdk`.
-3. The model returns a strict JSON plan: `{ steps: [{ agentId, description, output }] }`.
-4. We validate every `agentId` against the catalog and assemble a `Workflow` object.
-5. If the AI call fails, a deterministic fallback planner kicks in based on regex matching against the goal.
-
-### Agent Chat (`/api/chat`)
-1. User sends a message to a hired agent (e.g., Scout the research agent).
-2. The API builds a system prompt that injects the agent's name, role, and personality.
-3. GLM-4 responds in-character, in the agent's voice.
-4. Fallback replies are ready if the AI call fails.
-
----
-
-## 🎯 Roadmap
-
-- [ ] Real authentication (NextAuth.js)
-- [ ] Persistent agent hires via Prisma + SQLite
-- [ ] Streaming AI responses for chat & workflow steps
-- [ ] Custom agent builder (let users create their own agents)
-- [ ] Team workspaces
-- [ ] Webhook integrations (Slack, GitHub, Linear)
-- [ ] Real agent execution (currently a simulation)
-
----
-
-## 📄 License
-
-MIT — build cool things with it.
-
----
-
-## 🙏 Credits
-
-Built with the [Z.ai fullstack-dev skill](https://chat.z.ai). AI powered by the [z-ai-web-dev-sdk](https://www.npmjs.com/package/z-ai-web-dev-sdk) (GLM-4).
+Next.js 16 — React framework
+Tailwind CSS 4 — Styling
+shadcn/ui — UI primitives
+Framer Motion — Animations
+Recharts — Charts
+Vercel — Hosting
+Author: Syed Ainullah Agha (@rehu0)
