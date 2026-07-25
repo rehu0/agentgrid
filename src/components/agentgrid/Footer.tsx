@@ -99,8 +99,7 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 border-t border-border">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} AgentGrid. Built with Next.js &
-            z-ai-web-dev-sdk.
+            © {new Date().getFullYear()} AgentGrid. Author Syed Ainullah Agha.
           </p>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">
